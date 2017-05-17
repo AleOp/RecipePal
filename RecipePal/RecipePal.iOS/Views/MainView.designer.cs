@@ -1,4 +1,4 @@
-// WARNING
+﻿// WARNING
 //
 // This file has been generated automatically by Xamarin Studio from the outlets and
 // actions declared in your storyboard file.
@@ -7,32 +7,14 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace RecipePal.iOS.Views
 {
     [Register ("MainView")]
     partial class MainView
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UILabel UiLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UITextField UiTextField { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (UiLabel != null) {
-                UiLabel.Dispose ();
-                UiLabel = null;
-            }
-            if (UiTextField != null) {
-                UiTextField.Dispose ();
-                UiTextField = null;
-            }
         }
     }
 }
-

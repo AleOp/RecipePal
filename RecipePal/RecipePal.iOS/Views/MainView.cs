@@ -1,38 +1,31 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <summary>
-//    Defines the MainView type.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+﻿using System;
+using MvvmCross.iOS.Support.Presenters;
+using MvvmCross.iOS.Support.Views;
+using MvvmCross.iOS.Views;
+using RecipePal.Core.ViewModels;
+
 namespace RecipePal.iOS.Views
 {
-    using Core.ViewModels;
-    using MvvmCross.Binding.BindingContext;
-    using MvvmCross.iOS.Views;
-    using UIKit;
-
-    /// <summary>
-    /// Defines the MainView type.
-    /// </summary>
-    [MvxFromStoryboard]
-    public partial class MainView : BaseView
+    [MvxFromStoryboard(StoryboardName = "Main"),
+     MvxTabPresentation(MvxTabPresentationMode.Root)]
+    public partial class MainView : MvxBaseTabBarViewController<MainViewModel>
     {
-        /// <summary>
-        /// Views the did load.
-        /// </summary>
-        /// <summary>
-        /// Called when the View is first loaded
-        /// </summary>
-        public override void ViewDidLoad()
+        private bool _isPresentedFirstTime = true;
+
+        public MainView(IntPtr handle) : base(handle)
         {
-            base.ViewDidLoad();
+        }
 
-            MvxFluentBindingDescriptionSet<MainView, MainViewModel> set = this.CreateBindingSet<MainView, MainViewModel>();
-            set.Bind(this.UiLabel).To(vm => vm.MyProperty);
-            set.Bind(this.UiTextField).To(vm => vm.MyProperty);
-            set.Apply();
-
-            UITapGestureRecognizer tap = new UITapGestureRecognizer(() => this.View.ResignFirstResponder());
-            this.View.AddGestureRecognizer(tap);
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+           
+                       
+            if (ViewModel != null && _isPresentedFirstTime)
+            {
+                _isPresentedFirstTime = false;
+                 ViewModel.ShowInitialViewModelsCommand.Execute();
+            }
         }
     }
 }

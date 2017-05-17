@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="172">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="171">
+            <objects>
+                <viewController id="172" sceneMemberID="viewController" customClass="LoginView" storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="169"/>
+                        <viewControllerLayoutGuide type="bottom" id="170"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="173">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="176" translatesAutoresizingMaskIntoConstraints="NO" customClass="MvxImageView">
+                                <rect key="frame" x="-50" y="-50" width="700" height="700"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="257" translatesAutoresizingMaskIntoConstraints="NO" alpha="0.6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <subviews/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="179" translatesAutoresizingMaskIntoConstraints="NO" alpha="0">
+                                <rect key="frame" x="258" y="530" width="85" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.23137254901960785" green="0.34901960784313724" blue="0.596078431372549" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="230" firstItem="179" firstAttribute="height" constant="50"/>
+                                    <constraint id="231" firstItem="179" firstAttribute="width" constant="85"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="181" translatesAutoresizingMaskIntoConstraints="NO" alpha="0">
+                                <rect key="frame" x="258" y="530" width="85" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Microsoft">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="235" firstItem="181" firstAttribute="width" constant="85"/>
+                                    <constraint id="236" firstItem="181" firstAttribute="height" constant="50"/>
+                                </constraints>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="182" translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" alpha="0.7">
+                                <rect key="frame" x="175" y="530" width="250" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="250" firstItem="182" firstAttribute="width" constant="250"/>
+                                    <constraint id="251" firstItem="182" firstAttribute="height" constant="50"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="180" translatesAutoresizingMaskIntoConstraints="NO" alpha="0">
+                                <rect key="frame" x="258" y="530" width="85" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.83529411764705885" green="0.19607843137254902" blue="0.21176470588235294" alpha="1"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Google">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="243" firstItem="180" firstAttribute="height" constant="50"/>
+                                    <constraint id="244" firstItem="180" firstAttribute="width" constant="85"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipePal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="270" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="217" y="80" width="167" height="61"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="38"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="highlightedColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A great way to manage your food stuff" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="271" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="180" y="150" width="237" height="58"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="301" firstItem="271" firstAttribute="width" constant="237"/>
+                                </constraints>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.9137254901960784" green="0.027450980392156862" blue="0.027450980392156862" alpha="1"/>
+                        <constraints>
+                            <constraint id="224" firstItem="173" firstAttribute="leading" secondItem="176" secondAttribute="leading" constant="50"/>
+                            <constraint id="226" firstItem="169" firstAttribute="bottom" secondItem="176" secondAttribute="top" constant="70"/>
+                            <constraint id="227" firstItem="176" firstAttribute="bottom" secondItem="170" secondAttribute="top" constant="50"/>
+                            <constraint id="228" firstItem="176" firstAttribute="centerX" secondItem="173" secondAttribute="centerX"/>
+                            <constraint id="229" firstItem="176" firstAttribute="centerY" secondItem="173" secondAttribute="centerY"/>
+                            <constraint id="232" firstItem="179" firstAttribute="centerX" secondItem="176" secondAttribute="centerX"/>
+                            <constraint id="233" firstItem="170" firstAttribute="top" secondItem="179" secondAttribute="bottom" constant="20"/>
+                            <constraint id="234" firstItem="170" firstAttribute="top" secondItem="181" secondAttribute="bottom" constant="20"/>
+                            <constraint id="237" firstItem="181" firstAttribute="centerX" secondItem="176" secondAttribute="centerX"/>
+                            <constraint id="242" firstItem="170" firstAttribute="top" secondItem="180" secondAttribute="bottom" constant="20"/>
+                            <constraint id="245" firstItem="180" firstAttribute="centerX" secondItem="176" secondAttribute="centerX"/>
+                            <constraint id="252" firstItem="170" firstAttribute="top" secondItem="182" secondAttribute="bottom" constant="20"/>
+                            <constraint id="285" firstItem="257" firstAttribute="trailing" secondItem="173" secondAttribute="trailing"/>
+                            <constraint id="286" firstItem="169" firstAttribute="bottom" secondItem="257" secondAttribute="top" constant="20"/>
+                            <constraint id="287" firstItem="257" firstAttribute="leading" secondItem="173" secondAttribute="leading"/>
+                            <constraint id="288" firstItem="257" firstAttribute="bottom" secondItem="170" secondAttribute="top"/>
+                            <constraint id="289" firstItem="182" firstAttribute="centerX" secondItem="257" secondAttribute="centerX"/>
+                            <constraint id="295" firstItem="270" firstAttribute="centerX" secondItem="257" secondAttribute="centerX"/>
+                            <constraint id="296" firstItem="270" firstAttribute="top" secondItem="169" secondAttribute="bottom" constant="60"/>
+                            <constraint id="300" firstItem="257" firstAttribute="centerX" secondItem="271" secondAttribute="centerX" constant="1"/>
+                            <constraint id="302" firstItem="271" firstAttribute="top" secondItem="270" secondAttribute="bottom" constant="9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="FacebookBtn" destination="179" id="name-outlet-179"/>
+                        <outlet property="LoginBtn" destination="182" id="name-outlet-182"/>
+                        <outlet property="GoogleBtn" destination="180" id="name-outlet-180"/>
+                        <outlet property="MicrosoftBtn" destination="181" id="name-outlet-181"/>
+                        <outlet property="LoginPlaceholder" destination="176" id="name-outlet-176"/>
+                        <outlet property="LoginTitle" destination="270" id="name-outlet-270"/>
+                        <outlet property="LoginDesc" destination="271" id="name-outlet-271"/>
+                    </connections>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="174" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="-492"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MiscellaneousImg/DefaultFood.png" width="128" height="128"/>
+        <image name="MiscellaneousImg/Logout.png" width="40" height="40"/>
+        <image name="TabImages/Category.png" width="40" height="40"/>
+        <image name="TabImages/Dice.png" width="40" height="40"/>
+        <image name="TabImages/Settings.png" width="40" height="40"/>
+        <image name="MiscellaneousImg/RecipePalLogo.png" width="436" height="436"/>
+        <image name="TabImages/Favorites.png" width="40" height="40"/>
+    </resources>
+</document>

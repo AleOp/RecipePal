@@ -1,34 +1,32 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <summary>
-//    Defines the Setup type.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+using Android.Content;
+using MvvmCross.Binding.Bindings.Target.Construction;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platform;
+using RecipePal.Core;
+using RecipePal.Core.Services.Interfaces;
+using RecipePal.Droid.Services;
+
 namespace RecipePal.Droid
 {
-    using Android.Content;
-    using MvvmCross.Core.ViewModels;
-    using MvvmCross.Droid.Platform;
-
-    /// <summary>
-    ///    Defines the Setup type.
-    /// </summary>
     public class Setup : MvxAndroidSetup
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Setup"/> class.
-        /// </summary>
-        /// <param name="applicationContext">The application context.</param>
         public Setup(Context applicationContext) : base(applicationContext)
         {
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
         }
 
-        /// <summary>
-        /// Creates the app.
-        /// </summary>
-        /// <returns>An instance of IMvxApplication.</returns>
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            Mvx.RegisterType<ILoginWithProviderService, LoginWithProviderServiceDroid>();
+            return new App();
+        }
+
+        protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
+        {
+            MvxAppCompatSetupHelper.FillTargetFactories(registry);
+            base.FillTargetFactories(registry);
         }
     }
 }

@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="17">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View-->
+        <scene sceneID="16">
+            <objects>
+                <tabBarController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="17" customClass="MainView" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="20">
+                        <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2177" y="-635"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="190">
+            <objects>
+                <tableViewController storyboardIdentifier="MatchRecipeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="191" customClass="MatchRecipeView" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="192" separatorStyle="none">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodStuffCell" id="195" customClass="FoodStuffCell" rowHeight="80">
+                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="195" id="196">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1137" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="10" y="5" width="580" height="70"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1143" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="19" width="540" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            <constraints>
+                                                <constraint id="1183" firstItem="1143" firstAttribute="centerX" secondItem="1137" secondAttribute="centerX"/>
+                                                <constraint id="1184" firstItem="1143" firstAttribute="centerY" secondItem="1137" secondAttribute="centerY"/>
+                                                <constraint id="1185" firstItem="1143" firstAttribute="leading" secondItem="1137" secondAttribute="leading" constant="20"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="1179" firstItem="1137" firstAttribute="centerY" secondItem="196" secondAttribute="centerY"/>
+                                        <constraint id="1180" firstItem="1137" firstAttribute="centerX" secondItem="196" secondAttribute="centerX"/>
+                                        <constraint id="1181" firstItem="1137" firstAttribute="leading" secondItem="196" secondAttribute="leading" constant="10"/>
+                                        <constraint id="1182" firstItem="1137" firstAttribute="top" secondItem="196" secondAttribute="top" constant="5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="FrameView" destination="1137" id="name-outlet-1137"/>
+                                    <outlet property="IngredientName" destination="1143" id="name-outlet-1143"/>
+                                </connections>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="191" id="193"/>
+                            <outlet property="delegate" destination="191" id="194"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Match" id="741"/>
+                    <navigationItem key="navigationItem" title="Title" id="332"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="197" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-237" y="-612"/>
+        </scene>
+        <!--Ingredients Result View-->
+        <scene sceneID="507">
+            <objects>
+                <tableViewController storyboardIdentifier="FoodResultView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="508" customClass="FoodResultView" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="509">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="512" reuseIdentifier="IngredientResultsCell" style="IBUITableViewCellStyleDefault" textLabel="1173">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="512" id="513">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1173">
+                                            <rect key="frame" x="20" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="508" id="510"/>
+                            <outlet property="delegate" destination="508" id="511"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="514" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-873" y="-613"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="1191">
+            <objects>
+                <tableViewController id="1192" sceneMemberID="viewController" customClass="RecipeSuggestionsView" useStoryboardIdentifierAsRestorationIdentifier="YES" storyboardIdentifier="RecipeSuggestionsView">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="1193">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1196" customClass="SuggestedRecipeCell" rowHeight="96" accessoryType="disclosureIndicator" reuseIdentifier="SuggestedRecipeCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1196" id="1197">
+                                    <rect key="frame" x="0.0" y="0.0" width="562" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1202" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="9" y="8" width="580" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1203" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="natural">
+                                                    <rect key="frame" x="100" y="10" width="401" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1204" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="90" y="5" width="6" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1205" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="90" y="42" width="111" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="1785" firstItem="1205" firstAttribute="width" constant="111"/>
+                                                    </constraints>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1206" translatesAutoresizingMaskIntoConstraints="NO" customClass="MvxImageView">
+                                                    <rect key="frame" x="10" y="10" width="70" height="60"/>
+                                                    <constraints>
+                                                        <constraint id="2002" firstItem="1206" firstAttribute="width" constant="70"/>
+                                                        <constraint id="2003" firstItem="1206" firstAttribute="height" constant="60"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="1877" firstItem="1204" firstAttribute="top" secondItem="1202" secondAttribute="top" constant="5"/>
+                                                <constraint id="1878" firstItem="1203" firstAttribute="leading" secondItem="1204" secondAttribute="centerX" constant="7"/>
+                                                <constraint id="1879" firstItem="1202" firstAttribute="trailing" secondItem="1203" secondAttribute="trailing" constant="79"/>
+                                                <constraint id="1880" firstItem="1203" firstAttribute="top" secondItem="1202" secondAttribute="top" constant="10"/>
+                                                <constraint id="1882" firstItem="1205" firstAttribute="top" secondItem="1203" secondAttribute="bottom" constant="3"/>
+                                                <constraint id="2000" firstItem="1206" firstAttribute="leading" secondItem="1202" secondAttribute="leading" constant="10"/>
+                                                <constraint id="2001" firstItem="1206" firstAttribute="top" secondItem="1202" secondAttribute="top" constant="10"/>
+                                                <constraint id="2004" firstItem="1204" firstAttribute="leading" secondItem="1206" secondAttribute="trailing" constant="10"/>
+                                                <constraint id="2005" firstItem="1203" firstAttribute="leading" secondItem="1204" secondAttribute="leading" constant="10"/>
+                                                <constraint id="2006" firstItem="1205" firstAttribute="leading" secondItem="1206" secondAttribute="trailing" constant="10"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="1869" firstItem="1202" firstAttribute="centerX" secondItem="1197" secondAttribute="centerX" constant="18"/>
+                                        <constraint id="1870" firstItem="1202" firstAttribute="centerY" secondItem="1197" secondAttribute="centerY"/>
+                                        <constraint id="1871" firstItem="1202" firstAttribute="leading" secondItem="1197" secondAttribute="leading" constant="9"/>
+                                        <constraint id="1872" firstItem="1202" firstAttribute="top" secondItem="1197" secondAttribute="top" constant="8"/>
+                                        <constraint id="1873" firstItem="1197" firstAttribute="bottom" secondItem="1202" secondAttribute="bottom" constant="8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <connections>
+                                    <outlet property="frameView" destination="1202" id="name-outlet-1202"/>
+                                    <outlet property="RecipeImage" destination="1206" id="name-outlet-1206"/>
+                                    <outlet property="RecipeName" destination="1203" id="name-outlet-1203"/>
+                                    <outlet property="RecipeCookTime" destination="1205" id="name-outlet-1205"/>
+                                </connections>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1192" id="1194"/>
+                            <outlet property="delegate" destination="1192" id="1195"/>
+                        </connections>
+                        <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1198" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2177" y="84"/>
+        </scene>
+        <scene sceneID="1279">
+            <objects>
+                <tableViewController id="1280" sceneMemberID="viewController" customClass="RecipeDetailView" storyboardIdentifier="RecipeDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="1281" allowsSelection="NO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="1284" rowHeight="180" customClass="RecipeDetailCell" reuseIdentifier="RecipeDetailCell">
+                                <rect key="frame" x="0.0" y="228" width="600" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1284" id="1285">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1290" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="10" y="14" width="580" height="153"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1296" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="20" width="69" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1298" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="60" width="81" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serves:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1299" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="100" width="56" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1300" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="160" y="61" width="100" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="2213" firstItem="1300" firstAttribute="width" constant="100"/>
+                                                    </constraints>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1301" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="160" y="98" width="100" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="2216" firstItem="1301" firstAttribute="width" constant="100"/>
+                                                    </constraints>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1304" userInteractionEnabled="NO">
+                                                    <rect key="frame" x="160" y="20" width="169" height="34"/>
+                                                    <segments>
+                                                        <segment title="Easy" width="56"/>
+                                                        <segment title="Medium" width="56"/>
+                                                        <segment title="Hard" width="56"/>
+                                                    </segments>
+                                                    <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0.52549019607843139" blue="1" alpha="1"/>
+                                                    <constraints>
+                                                        <constraint id="1466" firstAttribute="width" secondItem="1304" secondAttribute="height" multiplier="21:4"/>
+                                                    </constraints>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="2157" firstItem="1296" firstAttribute="leading" secondItem="1290" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2158" firstItem="1296" firstAttribute="top" secondItem="1290" secondAttribute="top" constant="20"/>
+                                                <constraint id="2164" firstItem="1304" firstAttribute="top" secondItem="1290" secondAttribute="top" constant="20"/>
+                                                <constraint id="2165" firstItem="1304" firstAttribute="leading" secondItem="1296" secondAttribute="trailing" constant="71"/>
+                                                <constraint id="2180" firstItem="1299" firstAttribute="top" secondItem="1290" secondAttribute="top" constant="100"/>
+                                                <constraint id="2181" firstItem="1299" firstAttribute="leading" secondItem="1290" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2182" firstItem="1290" firstAttribute="bottom" secondItem="1299" secondAttribute="bottom" constant="21"/>
+                                                <constraint id="2183" firstItem="1290" firstAttribute="bottom" secondItem="1296" secondAttribute="bottom" constant="101"/>
+                                                <constraint id="2185" firstItem="1298" firstAttribute="top" secondItem="1290" secondAttribute="top" constant="60"/>
+                                                <constraint id="2186" firstItem="1298" firstAttribute="leading" secondItem="1290" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2187" firstItem="1290" firstAttribute="bottom" secondItem="1298" secondAttribute="bottom" constant="61"/>
+                                                <constraint id="2211" firstItem="1300" firstAttribute="leading" secondItem="1298" secondAttribute="trailing" constant="59"/>
+                                                <constraint id="2212" firstItem="1300" firstAttribute="top" secondItem="1304" secondAttribute="bottom" constant="9"/>
+                                                <constraint id="2214" firstItem="1301" firstAttribute="leading" secondItem="1299" secondAttribute="trailing" constant="84"/>
+                                                <constraint id="2215" firstItem="1301" firstAttribute="top" secondItem="1300" secondAttribute="bottom" constant="9"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="2150" firstItem="1290" firstAttribute="leading" secondItem="1285" secondAttribute="leading" constant="10"/>
+                                        <constraint id="2151" firstItem="1290" firstAttribute="top" secondItem="1285" secondAttribute="top" constant="15"/>
+                                        <constraint id="2152" firstItem="1285" firstAttribute="trailing" secondItem="1290" secondAttribute="trailing" constant="10"/>
+                                        <constraint id="2153" firstItem="1285" firstAttribute="bottom" secondItem="1290" secondAttribute="bottom" constant="12"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <connections>
+                                    <outlet property="ViewFrame" destination="1290" id="name-outlet-1290"/>
+                                    <outlet property="RecipeTitle" destination="1296" id="name-outlet-1296"/>
+                                    <outlet property="RecipeDifficulty" destination="1304" id="name-outlet-1304"/>
+                                    <outlet property="RecipeCookTime" destination="1300" id="name-outlet-1300"/>
+                                    <outlet property="RecipeServes" destination="1301" id="name-outlet-1301"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="2092" rowHeight="130" customClass="RecipeDescriptionCell" reuseIdentifier="RecipeDescriptionCell">
+                                <rect key="frame" x="0.0" y="408" width="600" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2092" id="2093">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1314" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="10" y="5" width="580" height="120"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1315" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="10" width="102" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1316" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0.0">
+                                                    <rect key="frame" x="20" y="43" width="540" height="65"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="2098" firstItem="1316" firstAttribute="leading" secondItem="1314" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2099" firstItem="1316" firstAttribute="top" secondItem="1314" secondAttribute="top" constant="43"/>
+                                                <constraint id="2100" firstItem="1314" firstAttribute="trailing" secondItem="1316" secondAttribute="trailing" constant="20"/>
+                                                <constraint id="2101" firstItem="1314" firstAttribute="bottom" secondItem="1316" secondAttribute="bottom" constant="12"/>
+                                                <constraint id="2102" firstItem="1315" firstAttribute="leading" secondItem="1314" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2103" firstItem="1315" firstAttribute="top" secondItem="1314" secondAttribute="top" constant="10"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="2094" firstItem="1314" firstAttribute="leading" secondItem="2093" secondAttribute="leading" constant="10"/>
+                                        <constraint id="2095" firstItem="1314" firstAttribute="top" secondItem="2093" secondAttribute="top" constant="5"/>
+                                        <constraint id="2096" firstItem="2093" firstAttribute="trailing" secondItem="1314" secondAttribute="trailing" constant="10"/>
+                                        <constraint id="2097" firstItem="2093" firstAttribute="bottom" secondItem="1314" secondAttribute="bottom" constant="5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <connections>
+                                    <outlet property="RecipeDescriptionLabel" destination="1316" id="name-outlet-1316"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="2106" rowHeight="90" customClass="RecipeIngredientsCell" reuseIdentifier="RecipeIngredientsCell">
+                                <rect key="frame" x="0.0" y="538" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2106" id="2107">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="2117" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="10" y="5" width="580" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2118" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="10" width="98" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2119" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0.0">
+                                                    <rect key="frame" x="20" y="43" width="540" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="2130" firstItem="2118" firstAttribute="leading" secondItem="2117" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2131" firstItem="2118" firstAttribute="top" secondItem="2117" secondAttribute="top" constant="10"/>
+                                                <constraint id="2132" firstItem="2119" firstAttribute="leading" secondItem="2117" secondAttribute="leading" constant="20"/>
+                                                <constraint id="2133" firstItem="2119" firstAttribute="top" secondItem="2117" secondAttribute="top" constant="43"/>
+                                                <constraint id="2134" firstItem="2117" firstAttribute="trailing" secondItem="2119" secondAttribute="trailing" constant="20"/>
+                                                <constraint id="2135" firstItem="2117" firstAttribute="bottom" secondItem="2119" secondAttribute="bottom" constant="7"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="2126" firstItem="2117" firstAttribute="leading" secondItem="2107" secondAttribute="leading" constant="10"/>
+                                        <constraint id="2127" firstItem="2107" firstAttribute="trailing" secondItem="2117" secondAttribute="trailing" constant="10"/>
+                                        <constraint id="2128" firstItem="2117" firstAttribute="top" secondItem="2107" secondAttribute="top" constant="5"/>
+                                        <constraint id="2129" firstItem="2107" firstAttribute="bottom" secondItem="2117" secondAttribute="bottom" constant="5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1"/>
+                                <connections>
+                                    <outlet property="RecipeIngredientsLabel" destination="2119" id="name-outlet-2119"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1280" id="1282"/>
+                            <outlet property="delegate" destination="1280" id="1283"/>
+                        </connections>
+                        <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                        <view contentMode="scaleToFill" id="1994" key="tableHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1995" translatesAutoresizingMaskIntoConstraints="NO" image="MiscellaneousImg/DefaultFood.png" customClass="MvxImageView">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2051" translatesAutoresizingMaskIntoConstraints="NO">
+                                    <rect key="frame" x="535" y="20" width="50" height="50"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <constraints>
+                                        <constraint id="2052" firstItem="2051" firstAttribute="height" constant="50"/>
+                                        <constraint id="2053" firstItem="2051" firstAttribute="width" constant="50"/>
+                                    </constraints>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint id="1996" firstItem="1995" firstAttribute="leading" secondItem="1994" secondAttribute="leading"/>
+                                <constraint id="1997" firstItem="1995" firstAttribute="top" secondItem="1994" secondAttribute="top"/>
+                                <constraint id="1998" firstItem="1995" firstAttribute="bottom" secondItem="1994" secondAttribute="bottom"/>
+                                <constraint id="1999" firstItem="1995" firstAttribute="trailing" secondItem="1994" secondAttribute="trailing"/>
+                                <constraint id="2054" firstItem="2051" firstAttribute="top" secondItem="1995" secondAttribute="top" constant="20"/>
+                                <constraint id="2055" firstItem="1995" firstAttribute="trailing" secondItem="2051" secondAttribute="trailing" constant="15"/>
+                            </constraints>
+                        </view>
+                    </tableView>
+                    <connections>
+                        <outlet property="RecipeImage" destination="1995" id="name-outlet-1995"/>
+                        <outlet property="FavoriteButton" destination="2051" id="name-outlet-2051"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1286" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1534" y="84"/>
+        </scene>
+        <scene sceneID="1502">
+            <objects>
+                <tableViewController id="1503" sceneMemberID="viewController" customClass="CategoriesView" storyboardIdentifier="CategoriesView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="1504">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1540" reuseIdentifier="CategoriesCell" customClass="CategoriesCell" rowHeight="80" accessoryType="disclosureIndicator">
+                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1540" id="1549">
+                                    <rect key="frame" x="0.0" y="0.0" width="562" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1542" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="10" y="5" width="584" height="71"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1546" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="94" y="21" width="470" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="1739" firstItem="1546" firstAttribute="width" constant="470"/>
+                                                    </constraints>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1550" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="78" y="15" width="6" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1544" translatesAutoresizingMaskIntoConstraints="NO" customClass="MvxImageView">
+                                                    <rect key="frame" x="10" y="5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint id="1586" firstItem="1544" firstAttribute="width" constant="60"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="1582" firstItem="1542" firstAttribute="width" constant="584"/>
+                                                <constraint id="1583" firstItem="1544" firstAttribute="leading" secondItem="1542" secondAttribute="leading" constant="10"/>
+                                                <constraint id="1584" firstItem="1542" firstAttribute="bottom" secondItem="1544" secondAttribute="bottom" constant="5"/>
+                                                <constraint id="1585" firstItem="1544" firstAttribute="top" secondItem="1542" secondAttribute="top" constant="5"/>
+                                                <constraint id="1737" firstItem="1550" firstAttribute="leading" secondItem="1544" secondAttribute="trailing" constant="8"/>
+                                                <constraint id="1738" firstItem="1550" firstAttribute="top" secondItem="1542" secondAttribute="top" constant="15"/>
+                                                <constraint id="1740" firstItem="1546" firstAttribute="leading" secondItem="1550" secondAttribute="centerX" constant="13"/>
+                                                <constraint id="1741" firstItem="1546" firstAttribute="top" secondItem="1542" secondAttribute="top" constant="21"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="1578" firstItem="1542" firstAttribute="leading" secondItem="1549" secondAttribute="leading" constant="10"/>
+                                        <constraint id="1579" firstItem="1542" firstAttribute="top" secondItem="1549" secondAttribute="top" constant="5"/>
+                                        <constraint id="1580" firstItem="1549" firstAttribute="bottom" secondItem="1542" secondAttribute="bottom" constant="4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <connections>
+                                    <outlet property="frameView" destination="1542" id="1541"/>
+                                    <outlet property="CategoryImage" destination="1544" id="name-outlet-1544"/>
+                                    <outlet property="CategoryName" destination="1546" id="name-outlet-1546"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1503" id="1505"/>
+                            <outlet property="delegate" destination="1503" id="1506"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1509" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1496" y="-610"/>
+        </scene>
+        <scene sceneID="1629">
+            <objects>
+                <tableViewController id="1630" sceneMemberID="viewController" customClass="SettingsView" storyboardIdentifier="SettingsView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="0" sectionFooterHeight="0" id="1631">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1630" id="1632"/>
+                            <outlet property="delegate" destination="1630" id="1633"/>
+                        </connections>
+                        <sections>
+                            <tableViewSection id="1640">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1641" reuseIdentifier="SettingsCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1641" id="1642">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="1941" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="10" y="5" width="580" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1943" translatesAutoresizingMaskIntoConstraints="NO">
+                                                            <rect key="frame" x="59" y="18" width="64" height="32"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1944" translatesAutoresizingMaskIntoConstraints="NO" image="MiscellaneousImg/Logout.png">
+                                                            <rect key="frame" x="10" y="15" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint id="1958" firstItem="1944" firstAttribute="height" constant="40"/>
+                                                                <constraint id="1959" firstItem="1944" firstAttribute="width" constant="40"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint id="1956" firstItem="1944" firstAttribute="centerY" secondItem="1941" secondAttribute="centerY"/>
+                                                        <constraint id="1957" firstItem="1944" firstAttribute="leading" secondItem="1941" secondAttribute="leading" constant="9"/>
+                                                        <constraint id="1961" firstItem="1943" firstAttribute="leading" secondItem="1944" secondAttribute="trailing" constant="10"/>
+                                                        <constraint id="1962" firstItem="1943" firstAttribute="top" secondItem="1941" secondAttribute="top" constant="18"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="1951" firstItem="1941" firstAttribute="leading" secondItem="1642" secondAttribute="leading" constant="10"/>
+                                                <constraint id="1952" firstItem="1941" firstAttribute="top" secondItem="1642" secondAttribute="top" constant="5"/>
+                                                <constraint id="1953" firstItem="1642" firstAttribute="trailing" secondItem="1941" secondAttribute="trailing" constant="10"/>
+                                                <constraint id="1954" firstItem="1642" firstAttribute="bottom" secondItem="1941" secondAttribute="bottom" constant="5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1937" reuseIdentifier="DeleteDbCell">
+                                        <rect key="frame" x="0.0" y="80" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1937" id="1938">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="1963" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="10" y="5" width="580" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete all data from the database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1968" translatesAutoresizingMaskIntoConstraints="NO">
+                                                            <rect key="frame" x="60" y="18" width="270" height="32"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1969" translatesAutoresizingMaskIntoConstraints="NO" image="MiscellaneousImg/DeleteDb.png">
+                                                            <rect key="frame" x="10" y="15" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint id="1972" firstItem="1969" firstAttribute="width" constant="40"/>
+                                                                <constraint id="1973" firstItem="1969" firstAttribute="height" constant="40"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint id="1970" firstItem="1969" firstAttribute="leading" secondItem="1963" secondAttribute="leading" constant="10"/>
+                                                        <constraint id="1971" firstItem="1969" firstAttribute="top" secondItem="1963" secondAttribute="top" constant="15"/>
+                                                        <constraint id="1974" firstItem="1968" firstAttribute="leading" secondItem="1969" secondAttribute="trailing" constant="10"/>
+                                                        <constraint id="1975" firstItem="1968" firstAttribute="top" secondItem="1963" secondAttribute="top" constant="18"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="1964" firstItem="1963" firstAttribute="leading" secondItem="1938" secondAttribute="leading" constant="10"/>
+                                                <constraint id="1965" firstItem="1963" firstAttribute="top" secondItem="1938" secondAttribute="top" constant="5"/>
+                                                <constraint id="1966" firstItem="1938" firstAttribute="trailing" secondItem="1963" secondAttribute="trailing" constant="10"/>
+                                                <constraint id="1967" firstItem="1938" firstAttribute="bottom" secondItem="1963" secondAttribute="bottom" constant="5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1636" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1498" y="-1266"/>
+        </scene>
+        <scene sceneID="1791">
+            <objects>
+                <tableViewController id="1792" sceneMemberID="viewController" customClass="FavoritesView" storyboardIdentifier="FavoritesView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="1793">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1804" customClass="FavoritesCell" rowHeight="96" accessoryType="disclosureIndicator" reuseIdentifier="FavoritesCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1804" id="1813">
+                                    <rect key="frame" x="0.0" y="0.0" width="562" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1806" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="8" y="8" width="580" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1810" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="natural">
+                                                    <rect key="frame" x="100" y="10" width="401" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1814" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="90" y="5" width="6" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1812" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="90" y="42" width="111" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="1815" firstItem="1812" firstAttribute="width" constant="111"/>
+                                                    </constraints>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1808" translatesAutoresizingMaskIntoConstraints="NO" customClass="MvxImageView">
+                                                    <rect key="frame" x="10" y="10" width="70" height="60"/>
+                                                    <constraints>
+                                                        <constraint id="2010" firstItem="1808" firstAttribute="width" constant="70"/>
+                                                        <constraint id="2011" firstItem="1808" firstAttribute="height" constant="60"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="1863" firstItem="1814" firstAttribute="top" secondItem="1806" secondAttribute="top" constant="5"/>
+                                                <constraint id="1864" firstItem="1810" firstAttribute="leading" secondItem="1814" secondAttribute="leading" constant="10"/>
+                                                <constraint id="1865" firstItem="1810" firstAttribute="top" secondItem="1806" secondAttribute="top" constant="10"/>
+                                                <constraint id="1866" firstItem="1806" firstAttribute="trailing" secondItem="1810" secondAttribute="trailing" constant="79"/>
+                                                <constraint id="1868" firstItem="1812" firstAttribute="top" secondItem="1810" secondAttribute="bottom" constant="3"/>
+                                                <constraint id="2008" firstItem="1808" firstAttribute="leading" secondItem="1806" secondAttribute="leading" constant="10"/>
+                                                <constraint id="2009" firstItem="1808" firstAttribute="top" secondItem="1806" secondAttribute="top" constant="10"/>
+                                                <constraint id="2012" firstItem="1814" firstAttribute="leading" secondItem="1808" secondAttribute="trailing" constant="10"/>
+                                                <constraint id="2013" firstItem="1812" firstAttribute="leading" secondItem="1808" secondAttribute="trailing" constant="10"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="1855" firstItem="1806" firstAttribute="leading" secondItem="1813" secondAttribute="leading" constant="8"/>
+                                        <constraint id="1856" firstItem="1806" firstAttribute="top" secondItem="1813" secondAttribute="top" constant="8"/>
+                                        <constraint id="1857" firstItem="1813" firstAttribute="bottom" secondItem="1806" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="1858" firstItem="1806" firstAttribute="centerY" secondItem="1813" secondAttribute="centerY"/>
+                                        <constraint id="1859" firstItem="1806" firstAttribute="centerX" secondItem="1813" secondAttribute="centerX" constant="17"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <connections>
+                                    <outlet property="frameView" destination="1806" id="1805"/>
+                                    <outlet property="RecipeImage" destination="1808" id="name-outlet-1808"/>
+                                    <outlet property="RecipeName" destination="1810" id="1809"/>
+                                    <outlet property="RecipeCookTime" destination="1812" id="1811"/>
+                                </connections>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1792" id="1794"/>
+                            <outlet property="delegate" destination="1792" id="1795"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1798" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="85"/>
+        </scene>
+        <scene sceneID="1886">
+            <objects>
+                <tableViewController id="1887" sceneMemberID="viewController" customClass="CategorizedRecipesView" storyboardIdentifier="CategorizedRecipesView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="1888">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1895" customClass="CategorizedRecipesCell" rowHeight="96" accessoryType="disclosureIndicator" reuseIdentifier="CategorizedRecipesCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1895" id="1904">
+                                    <rect key="frame" x="0.0" y="0.0" width="562" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="1897" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="8" y="8" width="580" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1901" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="natural">
+                                                    <rect key="frame" x="100" y="10" width="401" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1905" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="90" y="5" width="6" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1903" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="90" y="42" width="111" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="1906" firstItem="1903" firstAttribute="width" constant="111"/>
+                                                    </constraints>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1899" translatesAutoresizingMaskIntoConstraints="NO" customClass="MvxImageView">
+                                                    <rect key="frame" x="10" y="10" width="70" height="60"/>
+                                                    <constraints>
+                                                        <constraint id="2014" firstItem="1899" firstAttribute="height" constant="60"/>
+                                                        <constraint id="2015" firstItem="1899" firstAttribute="width" constant="70"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="1910" firstItem="1905" firstAttribute="top" secondItem="1897" secondAttribute="top" constant="5"/>
+                                                <constraint id="1911" firstItem="1901" firstAttribute="leading" secondItem="1905" secondAttribute="leading" constant="10"/>
+                                                <constraint id="1912" firstItem="1901" firstAttribute="top" secondItem="1897" secondAttribute="top" constant="10"/>
+                                                <constraint id="1913" firstItem="1897" firstAttribute="trailing" secondItem="1901" secondAttribute="trailing" constant="79"/>
+                                                <constraint id="1914" firstItem="1903" firstAttribute="top" secondItem="1901" secondAttribute="bottom" constant="3"/>
+                                                <constraint id="2016" firstItem="1899" firstAttribute="leading" secondItem="1897" secondAttribute="leading" constant="10"/>
+                                                <constraint id="2017" firstItem="1899" firstAttribute="top" secondItem="1897" secondAttribute="top" constant="10"/>
+                                                <constraint id="2018" firstItem="1905" firstAttribute="leading" secondItem="1899" secondAttribute="trailing" constant="10"/>
+                                                <constraint id="2019" firstItem="1903" firstAttribute="leading" secondItem="1899" secondAttribute="trailing" constant="10"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="1918" firstItem="1897" firstAttribute="leading" secondItem="1904" secondAttribute="leading" constant="8"/>
+                                        <constraint id="1919" firstItem="1897" firstAttribute="top" secondItem="1904" secondAttribute="top" constant="8"/>
+                                        <constraint id="1920" firstItem="1904" firstAttribute="bottom" secondItem="1897" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="1921" firstItem="1897" firstAttribute="centerY" secondItem="1904" secondAttribute="centerY"/>
+                                        <constraint id="1922" firstItem="1897" firstAttribute="centerX" secondItem="1904" secondAttribute="centerX" constant="17"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <connections>
+                                    <outlet property="frameView" destination="1897" id="1896"/>
+                                    <outlet property="RecipeImage" destination="1899" id="1898"/>
+                                    <outlet property="RecipeName" destination="1901" id="1900"/>
+                                    <outlet property="RecipeCookTime" destination="1903" id="1902"/>
+                                </connections>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1887" id="1889"/>
+                            <outlet property="delegate" destination="1887" id="1890"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1893" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-847" y="-1291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabImages/Dice.png" width="40" height="40"/>
+        <image name="TabImages/Settings.png" width="40" height="40"/>
+        <image name="TabImages/Category.png" width="40" height="40"/>
+        <image name="MiscellaneousImg/Logout.png" width="40" height="40"/>
+        <image name="MiscellaneousImg/DefaultFood.png" width="128" height="128"/>
+        <image name="MiscellaneousImg/RecipePalLogo.png" width="436" height="436"/>
+        <image name="TabImages/Favorites.png" width="40" height="40"/>
+        <image name="MiscellaneousImg/DeleteDb.png" width="40" height="40"/>
+        <image name="MiscellaneousImg/FavoriteBtn.png" width="100" height="100"/>
+        <image name="MiscellaneousImg/FavoriteBtnFilled.png" width="100" height="100"/>
+    </resources>
+</document>

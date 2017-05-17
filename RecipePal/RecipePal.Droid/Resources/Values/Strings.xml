@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">MvvmCross.Droid</string>
+  <string name="hello">Hello World, Click Me!</string>
+  <string name="app_name">Example.Droid</string>
+  <string name="empty_food_list">Have anything edible? Type it to find out what you can make from it!</string>
+  <string name="empty_favorites_list">You have no favorites yet. Have not liked any of available recipes?</string>
+  <string name="empty_categorized_recipes_list">There are no recipies in this category yet!</string>
+  <string name="recyclerview_listitem_grouped_data_converter">Example.Droid.Converters.ListItemGroupDataConverter, Example.Droid</string>
 </resources>

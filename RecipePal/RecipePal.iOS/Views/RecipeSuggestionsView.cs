@@ -21,11 +21,11 @@ namespace RecipePal.iOS.Views
         }
 
         public override void ViewDidLoad()
-        {          
+        {
             base.ViewDidLoad();
 
             TableAdditionalStyling.ChangeBackgroundColor(TableView);
-       
+
             CreateBindings();
 
             NavigationItem.Title = "Results";
@@ -38,6 +38,7 @@ namespace RecipePal.iOS.Views
             this.CreateBinding(source)
                 .For(v => v.ItemsSource)
                 .To((RecipeSuggestionsViewModel vm) => vm.MatchedRecipesList)
+                .WithConversion(new MatchedRecipesSourceListValueConverter(), null)
                 .Apply();
 
             TableView.Source = source;

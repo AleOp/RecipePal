@@ -23,7 +23,7 @@
     android:text="A better way to manage your food"
     android:layout_width="200sp"
     android:layout_height="50sp"
-    android:id="@+id/textView3"
+    android:id="@+id/recipepal_desc"
     android:layout_gravity="center_horizontal"
     android:gravity="center"
     android:textColor="@android:color/white"

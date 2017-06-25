@@ -26,6 +26,7 @@ namespace RecipePal.iOS.Setup
             startup.Start();
 
             Window.MakeKeyAndVisible();
+            Window.TintColor = UIColor.Red;
 
             return true;
         }
@@ -34,7 +35,7 @@ namespace RecipePal.iOS.Setup
         {
             UITabBarItem.Appearance.SetTitleTextAttributes(
                 new UITextAttributes {Font = UIFont.FromName("Noteworthy-Bold", 11)},
-                UIControlState.Normal & UIControlState.Selected);
+                UIControlState.Normal & UIControlState.Selected);          
             UIBarButtonItem.Appearance.SetTitleTextAttributes(new UITextAttributes {Font = UIFont.FromName("Noteworthy", 17)},
                 UIControlState.Normal & UIControlState.Selected);
             UINavigationBar.Appearance.TitleTextAttributes =

@@ -70,7 +70,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchProfiling>False</MtouchProfiling>
     <MtouchFastDev>False</MtouchFastDev>
-    <MtouchNoSymbolStrip>True</MtouchNoSymbolStrip>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchUseLlvm>False</MtouchUseLlvm>
     <MtouchUseThumb>False</MtouchUseThumb>
     <MtouchEnableBitcode>False</MtouchEnableBitcode>
@@ -108,7 +108,7 @@
     <OptimizePNGs>True</OptimizePNGs>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchFloat32>False</MtouchFloat32>
+    <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>

@@ -2841,6 +2841,9 @@ namespace RecipePal.Droid
 			// aapt resource value: 0x7f0800c0
 			public const int recipe_title = 2131230912;
 			
+			// aapt resource value: 0x7f08007d
+			public const int recipepal_desc = 2131230845;
+			
 			// aapt resource value: 0x7f08007c
 			public const int recipepal_title = 2131230844;
 			
@@ -3002,9 +3005,6 @@ namespace RecipePal.Droid
 			
 			// aapt resource value: 0x7f080053
 			public const int textSpacerNoTitle = 2131230803;
-			
-			// aapt resource value: 0x7f08007d
-			public const int textView3 = 2131230845;
 			
 			// aapt resource value: 0x7f080097
 			public const int text_input_password_toggle = 2131230871;

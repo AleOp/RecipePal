@@ -59,13 +59,7 @@ namespace RecipePal.Core.Mock
 
                     new Ingredient {QuantityTag = -1, RecipeTag = 3, Name = "Boneless beef pot", Quantity = 1},
                     new Ingredient {QuantityTag = 10, RecipeTag = 3, Name = "Wonton wrappers", Quantity = 0.5},
-                    new Ingredient
-                    {
-                        QuantityTag = 7,
-                        RecipeTag = 3,
-                        Name = "Southeast Asian peanut sauce",
-                        Quantity = 0.25
-                    },
+                    new Ingredient {QuantityTag = 7, RecipeTag = 3, Name = "Southeast Asian peanut sauce", Quantity = 0.25},
                     new Ingredient {QuantityTag = 6, RecipeTag = 3, Name = "Hoisin sauce", Quantity = 2},
                     new Ingredient {QuantityTag = -1, RecipeTag = 3, Name = "Yellow bell pepper", Quantity = 1},
                     new Ingredient {QuantityTag = 7, RecipeTag = 3, Name = "Vegetable oil", Quantity = 1},

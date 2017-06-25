@@ -19,6 +19,8 @@ namespace RecipePal.Droid.Views.Activities
         private Button _googleLoginButton;
         private Button _microsoftLoginButton;
         private Button _signIn;
+        private TextView _reciepalTitle;
+        private TextView _reciepalDesc;
 
         protected override void OnCreate(Bundle savedInstance)
         {
@@ -30,7 +32,8 @@ namespace RecipePal.Droid.Views.Activities
             _googleLoginButton = FindViewById<Button>(Resource.Id.google_login);
             _microsoftLoginButton = FindViewById<Button>(Resource.Id.microsoft_login);
             _signIn = FindViewById<Button>(Resource.Id.sign_in_button);
-
+            _reciepalTitle = FindViewById<TextView>(Resource.Id.recipepal_title);
+            _reciepalDesc = FindViewById<TextView>(Resource.Id.recipepal_desc);
             LoginWithProviderServiceDroid.ApplicationContext = this;
 
             SetSigninEvent();
@@ -50,12 +53,17 @@ namespace RecipePal.Droid.Views.Activities
                 .To(vm => vm.LoginAsyncCommand)
                 .CommandParameter(MobileServiceAuthenticationProvider.MicrosoftAccount);
             set.Apply();
+
+            _reciepalTitle.TranslationY = 500;
+            _reciepalDesc.TranslationY = 500;
         }
 
         private void SetSigninEvent()
         {
             _signIn.Click += (sender, args) =>
             {
+                _reciepalTitle.Animate().TranslationY(0);
+                _reciepalDesc.Animate().TranslationY(0);
                 _microsoftLoginButton.Animate().Alpha(1f);
                 _facebookLoginButton.Animate().Alpha(1f);
                 _googleLoginButton.Animate().Alpha(1f);
